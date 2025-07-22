@@ -1,0 +1,45 @@
+# ########## Dependencias de Node.js ##########
+# La carpeta de paquetes instalados. Es la más importante a ignorar.
+# Se puede regenerar en cualquier momento con `npm install`.
+node_modules/
+
+# ########## Archivos de Vercel ##########
+# Carpeta generada por la Vercel CLI (`vercel dev`) que contiene el build y la caché local.
+.vercel/
+
+# ########## Variables de Entorno y Secretos ##########
+# ¡NUNCA subas tus secretos a Git!
+# Esto ignora archivos como .env, .env.local, .env.production, etc.
+.env*
+# Excepción: puedes incluir un archivo de ejemplo que no contenga secretos.
+# Descomenta la línea de abajo si usas un archivo de ejemplo.
+# !.env.example
+
+# ########## Logs ##########
+# Archivos de log generados durante la ejecución o depuración.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# ########## Archivos del Sistema Operativo ##########
+# Archivos de metadatos de macOS.
+.DS_Store
+# Archivos de caché de imágenes de Windows.
+Thumbs.db
+
+# ########## Archivos del Editor de Código ##########
+# Carpeta de configuración de Visual Studio Code.
+.vscode/
+# Carpeta de configuración de editores de JetBrains (WebStorm, IntelliJ).
+.idea/
+
+# ########## Carpetas de Build (Opcional pero recomendado) ##########
+# Si en el futuro usas TypeScript o un bundler, ignorarás la carpeta de salida.
+dist/
+build/
+out/
+
+# ########## Reportes de Pruebas ##########
+# Si agregas pruebas, la carpeta de reportes de cobertura no debe ir al repo.
+coverage/
