@@ -1,5 +1,5 @@
 import express from 'express';
-import { createKysely } from '@vercel/kv';
+import { createClient } from '@vercel/kv';
 import { nanoid } from 'nanoid';
 
 // Inicializar Express App
@@ -7,8 +7,10 @@ const app = express();
 app.use(express.json()); // Middleware para parsear JSON
 
 // Conectar a Vercel KV
-const kv = createKysely();
-
+const kv = createClient({
+  url: process.env.KV_REST_API_URL,
+  token: process.env.KV_REST_API_TOKEN,
+});
 // --- ÍNDICES ---
 // Usaremos dos sets para mantener un registro de todas las claves
 const CARRERAS_INDEX_KEY = 'idx:carreras';
